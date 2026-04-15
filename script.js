@@ -104,29 +104,35 @@ if (messageInput) {
 
 // Add some additional animations
 document.addEventListener('DOMContentLoaded', function() {
-    // Only use Intersection Observer for service cards on mobile devices
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        const serviceCards = document.querySelectorAll('.service-card');
-        
-        const cardObserverOptions = {
-            threshold: 0.6,
-            rootMargin: "0px 0px -10% 0px"
-        };
-        
-        const cardObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                } else {
-                    entry.target.classList.remove('active');
-                }
-            });
-        }, cardObserverOptions);
-        
-        serviceCards.forEach(card => {
-            cardObserver.observe(card);
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    const cardObserverOptions = {
+        threshold: 0.4, // Lowered threshold so it triggers earlier
+        rootMargin: "0px 0px -10% 0px"
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) return; // Let CSS hover handle desktop
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            } else {
+                entry.target.classList.remove('active');
+            }
         });
-    }
+    }, cardObserverOptions);
+    
+    serviceCards.forEach(card => {
+        cardObserver.observe(card);
+    });
+
+    // Clean up active classes if window is resized to desktop width
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            serviceCards.forEach(card => card.classList.remove('active'));
+        }
+    });
 });
 
 // Stat Counter Animation
