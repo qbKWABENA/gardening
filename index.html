@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beky's Garden - Transforming Gardens into Paradise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- Text-based logo with SVG leaf icon -->
+            <div class="logo">
+                <!-- Garden-themed SVG icon -->
+                <svg class="logo-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Center stem -->
+                    <path d="M12 20V8" stroke="#1f5e3b" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Top flower petals -->
+                    <circle cx="12" cy="6" r="2.5" fill="#1f5e3b"/>
+                    <ellipse cx="9" cy="4" rx="1.8" ry="2.8" fill="#1f5e3b" transform="rotate(-30 9 4)"/>
+                    <ellipse cx="15" cy="4" rx="1.8" ry="2.8" fill="#1f5e3b" transform="rotate(30 15 4)"/>
+                    <ellipse cx="8" cy="7" rx="1.8" ry="2.5" fill="#1f5e3b" transform="rotate(-60 8 7)"/>
+                    <ellipse cx="16" cy="7" rx="1.8" ry="2.5" fill="#1f5e3b" transform="rotate(60 16 7)"/>
+                    <!-- Left leaf -->
+                    <path d="M12 12Q8 11 7 14Q6.5 16 9 18" stroke="#1f5e3b" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+                    <!-- Right leaf -->
+                    <path d="M12 12Q16 11 17 14Q17.5 16 15 18" stroke="#1f5e3b" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+                    <!-- Soil base -->
+                    <ellipse cx="12" cy="21" rx="4" ry="1.5" fill="#1f5e3b" opacity="0.3"/>
+                </svg>
+                <!-- Company name -->
+                <span id="company-name">Beky's Garden</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-bg-elements">
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+            <div class="firefly"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Bring <span class="highlight">Nature's Beauty</span> into your Home</h1>
+                <p>Professional gardening and landscaping services to transform your outdoor space into a sustainable paradise.</p>
+                <div class="cta-buttons">
+                    <a href="#shop" class="cta-button">Shop Now</a>
+                    <a href="#contact" class="cta-button-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>At Beky's Garden, we are passionate about creating beautiful, sustainable outdoor spaces. With years of experience in gardening and landscaping, we bring your vision to life with expert care and attention to detail. Our team specializes in everything from lawn maintenance to elaborate garden designs, ensuring your garden thrives year-round.</p>
+                </div>
+                <div class="about-image">
+                    <img src="pictures/About Beky's Garden.jpg" alt="About Beky's Garden">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img class="service-bg-image" src="pictures/Landscaping.jpg" alt="Landscaping Service">
+                    <div class="service-overlay">
+                        <h3>Landscaping</h3>
+                        <p>Complete landscape design and installation for residential and commercial properties.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-bg-image" src="pictures/Flower Arrangement.jpg" alt="Flower Arrangement Service">
+                    <div class="service-overlay">
+                        <h3>Flower Arrangement</h3>
+                        <p>Beautiful floral arrangements and seasonal planting to brighten your space.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-bg-image" src="pictures/Lawn Maintenance.jpg" alt="Lawn Maintenance Service">
+                    <div class="service-overlay">
+                        <h3>Lawn Maintenance</h3>
+                        <p>Regular lawn care, mowing, fertilization, and weed control services.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img class="service-bg-image" src="pictures/Garden Design.jpg" alt="Garden Design Service">
+                    <div class="service-overlay">
+                        <h3>Garden Design</h3>
+                        <p>Custom garden planning and design tailored to your style and needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="shop section">
+        <div class="container">
+            <h2>Our Plant Collections</h2>
+            <p class="shop-subtitle">Browse our selection of beautiful plants for every space and lifestyle</p>
+            <div class="products-grid">
+                <!-- Indoor Plants -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Pothos (Devil\'s Ivy).jpg')"></div>
+                    <div class="product-info">
+                        <h3>Pothos (Devil's Ivy)</h3>
+                        <p class="product-category">Indoor Plant</p>
+                        <p class="product-description">Perfect for beginners. Low-maintenance vine that thrives in various light conditions.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Snake Plant.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Snake Plant</h3>
+                        <p class="product-category">Indoor Plant</p>
+                        <p class="product-description">Air-purifying succulent that requires minimal watering and care.</p>
+                    </div>
+                </div>
+
+                <!-- Flowering Plants -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Orchid.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Orchid</h3>
+                        <p class="product-category">Flowering Plant</p>
+                        <p class="product-description">Elegant blooms that last for months. A stunning addition to any collection.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Peace Lily.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Peace Lily</h3>
+                        <p class="product-category">Flowering Plant</p>
+                        <p class="product-description">Beautiful white flowers and air-purifying properties for your home.</p>
+                    </div>
+                </div>
+
+                <!-- Trees & Shrubs -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Ficus Tree.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Ficus Tree</h3>
+                        <p class="product-category">Tree & Shrub</p>
+                        <p class="product-description">Tall ornamental tree perfect for creating a focal point in any room.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Lucky Bamboo.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Lucky Bamboo</h3>
+                        <p class="product-category">Tree & Shrub</p>
+                        <p class="product-description">Brings good luck and positive energy. Easy to care for and aesthetically pleasing.</p>
+                    </div>
+                </div>
+
+                <!-- Rare Plants -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Monstera Deliciosa.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Monstera Deliciosa</h3>
+                        <p class="product-category">Rare Plant</p>
+                        <p class="product-description">Instagram-famous Swiss Cheese Plant with unique split leaves.</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('pictures/Bird of Paradise.jpg')"></div>
+                    <div class="product-info">
+                        <h3>Bird of Paradise</h3>
+                        <p class="product-category">Rare Plant</p>
+                        <p class="product-description">Exotic tropical plant with stunning orange and blue flowers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2>Bring Nature Home</h2>
+            <p class="portfolio-subtitle">Discover how to transform your living space with beautiful plants and natural decorations</p>
+            <div class="portfolio-grid">
+                <!-- Indoor Plants & Wellness -->
+                <div class="portfolio-item">
+                    <div class="feature-card">
+                        <div class="feature-icon portfolio-img-1"></div>
+                        <h3>Indoor Plants & Wellness</h3>
+                        <p>Purify your air, boost your mood with indoor greenery</p>
+                    </div>
+                </div>
+
+                <!-- Low-Maintenance Solutions -->
+                <div class="portfolio-item">
+                    <div class="feature-card">
+                        <div class="feature-icon portfolio-img-2"></div>
+                        <h3>Low-Maintenance Solutions</h3>
+                        <p>Beautiful plants that thrive with minimal care</p>
+                    </div>
+                </div>
+
+                <!-- Home Garden Designs -->
+                <div class="portfolio-item">
+                    <div class="feature-card">
+                        <div class="feature-icon portfolio-img-3"></div>
+                        <h3>Home Garden Designs</h3>
+                        <p>Transform any space into a lush oasis</p>
+                    </div>
+                </div>
+
+                <!-- Sustainable Plant Life -->
+                <div class="portfolio-item">
+                    <div class="feature-card">
+                        <div class="feature-icon portfolio-img-4"></div>
+                        <h3>Sustainable Plant Life</h3>
+                        <p>Organic, eco-friendly plant care for your home</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <p class="testimonials-subtitle">Join hundreds of satisfied customers who've transformed their gardens</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Beky's Garden transformed my small apartment into a lush green sanctuary. The staff was incredibly knowledgeable and helped me choose the perfect plants for my space. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <h4>Sarah Mitchell</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The landscaping work on my backyard was exceptional. They took my vision and made it even better. The garden looks stunning and is so easy to maintain. Worth every penny!"</p>
+                    <div class="testimonial-author">
+                        <h4>James Rodriguez</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I had no green thumb, but Beky's Garden made it so simple. Their low-maintenance plant suggestions are perfect for my busy lifestyle. The plants are thriving!"</p>
+                    <div class="testimonial-author">
+                        <h4>Emily Chen</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Customer service is second to none. When I had questions about plant care, they went above and beyond to help. My garden has never looked better!"</p>
+                    <div class="testimonial-author">
+                        <h4>Michael Thompson</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number">150+</h3>
+                    <p class="stat-label">Orders Weekly</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">2,450+</h3>
+                    <p class="stat-label">Products Sold</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">180+</h3>
+                    <p class="stat-label">Plant Collection</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">98%</h3>
+                    <p class="stat-label">Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>How often should I water my indoor plants?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most indoor plants prefer soil that is moist but not waterlogged. Generally, water when the top inch of soil feels dry to the touch. This typically means watering once a week, but it varies by plant type and humidity. Succulents need less frequent watering, while tropical plants may need more.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>What plants are best for beginners?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Some excellent beginner-friendly plants include Pothos, Snake Plant, ZZ Plant, Spider Plant, and Succulents. These plants are forgiving, require minimal care, tolerate low light, and can handle inconsistent watering. They're perfect for building confidence before moving to more demanding plants.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>How much sunlight do most plants need?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Light requirements vary by plant. Most indoor plants prefer bright, indirect light (3-6 hours daily). Succulents and cacti need more direct sunlight (6-8 hours), while shade-tolerant plants like Pothos can survive in low light. Position plants near a window but out of direct rays to prevent leaf burn.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>What services do you offer for commercial spaces?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer full-service landscaping, interior plant design and maintenance, seasonal planting, and lawn care for commercial properties. Our team can create custom designs that enhance your business environment and maintain ongoing care to keep everything looking pristine.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header" onclick="toggleFaq(this)">
+                        <h3>Do you offer delivery and installation?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer delivery and installation services for all our landscaping projects and plants. Our team will handle everything from delivery to professional installation, ensuring your garden is set up perfectly. Contact us for delivery rates to your area.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-form-container">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <div class="info-item">
+                            <h3>Phone</h3>
+                            <p>(555) 123-4567</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Email</h3>
+                            <p>info@bekysgarden.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Location</h3>
+                            <p>123 Garden Street, Green City, GC 12345</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-column footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-img">🌿</div>
+                        <h3>Beky's Garden</h3>
+                    </div>
+                    <p>Creating beautiful, sustainable outdoor spaces that transform your home into a paradise. Professional gardening and landscaping services you can trust.</p>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-column footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <p><strong>Phone:</strong></p>
+                        <p><a href="tel:(555)123-4567">(555) 123-4567</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <p><strong>Email:</strong></p>
+                        <p><a href="mailto:info@bekysgarden.com">info@bekysgarden.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <p><strong>Location:</strong></p>
+                        <p>123 Garden Street<br>Green City, GC 12345</p>
+                    </div>
+                </div>
+
+                <!-- Social Column -->
+                <div class="footer-column footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-icon-link" data-social="facebook">
+                            <span class="social-icon-inner">f</span>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-icon-link" data-social="instagram">
+                            <span class="social-icon-inner">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-icon-link" data-social="twitter">
+                            <span class="social-icon-inner">𝕏</span>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-icon-link" data-social="linkedin">
+                            <span class="social-icon-inner">in</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Follow Section -->
+            <!-- <div class="footer-social-section">
+                <h2 class="social-title">Follow Us</h2>
+                <div class="social-icons-grid">
+                    <a href="#" aria-label="Instagram" class="social-circle" data-social="instagram" title="Instagram">
+                        <span class="icon-text">📷</span>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="social-circle" data-social="facebook" title="Facebook">
+                        <span class="icon-text">f</span>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-circle" data-social="twitter" title="Twitter">
+                        <span class="icon-text">𝕏</span>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="social-circle" data-social="linkedin" title="LinkedIn">
+                        <span class="icon-text">in</span>
+                    </a>
+                </div>
+            </div> -->
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Beky's Garden. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
