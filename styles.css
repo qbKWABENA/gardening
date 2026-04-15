@@ -550,16 +550,16 @@ nav {
     margin: 0;
 }
 
-.service-card:hover {
+.service-card:hover, .service-card.active {
     transform: translateY(-8px);
     box-shadow: 0 20px 48px rgba(45, 125, 58, 0.15);
 }
 
-.service-card:hover .service-overlay {
+.service-card:hover .service-overlay, .service-card.active .service-overlay {
     opacity: 1;
 }
 
-.service-card:hover .service-bg-image {
+.service-card:hover .service-bg-image, .service-card.active .service-bg-image {
     transform: scale(1.08);
 }
 

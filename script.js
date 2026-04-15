@@ -104,16 +104,29 @@ if (messageInput) {
 
 // Add some additional animations
 document.addEventListener('DOMContentLoaded', function() {
-    // Add hover effect to service cards
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px) scale(1.02)';
+    // Only use Intersection Observer for service cards on mobile devices
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        const serviceCards = document.querySelectorAll('.service-card');
+        
+        const cardObserverOptions = {
+            threshold: 0.6,
+            rootMargin: "0px 0px -10% 0px"
+        };
+        
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, cardObserverOptions);
+        
+        serviceCards.forEach(card => {
+            cardObserver.observe(card);
         });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) scale(1)';
-        });
-    });
+    }
 });
 
 // Stat Counter Animation
