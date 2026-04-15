@@ -111,9 +111,10 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: "0px 0px -10% 0px"
     };
 
+    const isMobileMediaQuery = window.matchMedia('(max-width: 768px)');
+
     const cardObserver = new IntersectionObserver((entries) => {
-        const isMobile = window.innerWidth <= 768;
-        if (!isMobile) return; // Let CSS hover handle desktop
+        if (!isMobileMediaQuery.matches) return; // Only animate on mobile screens
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
@@ -129,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Clean up active classes if window is resized to desktop width
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
+        if (!isMobileMediaQuery.matches) { // If it's no longer a mobile screen
             serviceCards.forEach(card => card.classList.remove('active'));
         }
     });
