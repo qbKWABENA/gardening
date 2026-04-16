@@ -310,7 +310,6 @@ nav {
     padding: 30px 20px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.4s ease;
 }
@@ -685,23 +684,6 @@ nav {
 .feature-card:hover .feature-icon {
     transform: scale(1.1);
     box-shadow: 0 12px 32px rgba(45, 125, 58, 0.4);
-}
-
-/* Portfolio Image Classes */
-.portfolio-img-1 {
-    background-image: url('https://picsum.photos/400/300?random=20');
-}
-
-.portfolio-img-2 {
-    background-image: url('https://picsum.photos/400/300?random=21');
-}
-
-.portfolio-img-3 {
-    background-image: url('https://picsum.photos/400/300?random=22');
-}
-
-.portfolio-img-4 {
-    background-image: url('https://picsum.photos/400/300?random=23');
 }
 
 .feature-card h3 {
@@ -1297,7 +1279,7 @@ footer {
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     color: rgba(255, 255, 255, 0.8);
-    border: 1.5px solid rgba(109, 214, 125, 0.3);
+    border: 1.5px solid rgba(0, 255, 38, 0.3);
     font-weight: 600;
     font-size: 1.2rem;
 }
@@ -1354,7 +1336,7 @@ footer {
 }
 
 .footer-bottom-links a:hover {
-    color: #6dd67d;
+    color: #00a118;
 }
 
 /* Social Follow Section */
