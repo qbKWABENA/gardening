@@ -1,8 +1,12 @@
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Prevent smooth scrolling logic for empty hash links
+        if (href === '#') return;
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -26,6 +30,17 @@ navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
+    });
+});
+
+// Parallax Effect for Hero Fireflies
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const fireflies = document.querySelectorAll('.firefly');
+    
+    fireflies.forEach((firefly, index) => {
+        const speed = 0.1 + (index * 0.05);
+        firefly.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
 
@@ -176,30 +191,6 @@ function animateStatNumbers() {
 // Initialize stat counter on page load
 document.addEventListener('DOMContentLoaded', animateStatNumbers);
 
-// Theme Toggle Logic
-const themeToggleCheckbox = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Check for saved user preference in localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-    body.classList.add('dark-theme');
-    if (themeToggleCheckbox) themeToggleCheckbox.checked = true;
-}
-
-if (themeToggleCheckbox) {
-    themeToggleCheckbox.addEventListener('change', () => {
-        body.classList.toggle('dark-theme');
-        
-        if (body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark');
-            themeToggleCheckbox.checked = true;
-        } else {
-            localStorage.setItem('theme', 'light');
-            themeToggleCheckbox.checked = false;
-        }
-    });
-}
 
 // FAQ Accordion Toggle
 function toggleFaq(element) {

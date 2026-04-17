@@ -1,3 +1,16 @@
+/* Global Variables for Modern Depth */
+:root {
+    --primary-color: #1a5a2a;
+    --secondary-color: #2d7d3a;
+    --accent-color: #6dd67d;
+    --bg-light: #e9f5ed;
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: rgba(26, 90, 42, 0.1);
+    --font-main: 'Montserrat', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -6,24 +19,25 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-main);
     line-height: 1.6;
     color: #2c3e2f;
-    background-color: #d4e8d9;
+    background-color: #e9f5ed;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 800;
     color: #1a5a2a;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 h2 {
@@ -31,6 +45,7 @@ h2 {
     margin-bottom: 1.5rem;
     color: #1a5a2a;
     letter-spacing: -0.5px;
+    letter-spacing: -0.2px;
 }
 
 h3 {
@@ -42,8 +57,10 @@ h3 {
 p {
     margin-bottom: 1rem;
     color: #4a5a52;
+    color: #2c3e2f;
     line-height: 1.8;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 a {
@@ -67,37 +84,47 @@ img {
 /* Header and Navigation */
 header {
     position: fixed;
-    top: 0;
+    top: 20px;
     width: 100%;
-    background-color: rgba(212, 232, 217, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
-    box-shadow: 0 2px 12px rgba(26, 90, 42, 0.08);
-    border-bottom: 1px solid #c8dcc8;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
-    max-width: 1200px;
+    padding: 10px 24px;
+    max-width: 95%;
+    width: 900px;
     margin: 0 auto;
-    width: 100%;
+    pointer-events: auto;
+    border-radius: 100px;
+    box-shadow: 0 8px 30px rgba(26, 90, 42, 0.08);
+    border: 1px solid rgba(45, 125, 58, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .logo {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .logo:hover {
     opacity: 0.85;
+    opacity: 0.7;
+    transform: none;
 }
 
 /* SVG leaf icon styling */
@@ -120,20 +147,24 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 0.5rem;
     align-items: center;
+    gap: 5px;
 }
 
 .nav-links a {
     font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 50px;
+    box-shadow: none;
+    border: none;
     color: #2c3e2f;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     letter-spacing: 0.5px;
-    transition: all 0.9s ease;
-    padding: 5px 10px;
     position: relative;
     display: inline-block;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .nav-links a::before,
@@ -159,6 +190,10 @@ nav {
 
 .nav-links a:hover {
     color: #2d7d3a;
+    transform: translateY(-2px);
+    background-color: transparent;
+    color: var(--secondary-color);
+    box-shadow: none;
 }
 
 .nav-links a:hover::before {
@@ -189,6 +224,7 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 5px;
 }
 
 .hamburger span {
@@ -281,11 +317,12 @@ nav {
     /* Smoothly blend into the greyish green background */
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.15) 0%,
-        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.08) 0%,
+        rgba(0, 0, 0, 0.05) 50%,
         rgba(168, 187, 173, 0.377) 80%,
         oklab(81.33500000000001% -0.02686 0.01346) 100%
     );
+    background: rgba(0, 0, 0, 0.45);
 
     pointer-events: none;
 }
@@ -308,9 +345,10 @@ nav {
 
 .stat-card {
     padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.4s ease;
 }
 
@@ -386,6 +424,7 @@ nav {
     font-size: 1.4rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     color: rgba(255, 255, 255, 0.95);
 }
 
@@ -399,6 +438,7 @@ nav {
     font-size: 1.1rem;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 2px solid #2d7d3a;
+    border: 2px solid #ffffff;
     letter-spacing: 0.5px;
     box-shadow: 0 8px 20px rgba(45, 125, 58, 0.3);
 }
@@ -421,12 +461,14 @@ nav {
     display: inline-block;
     background-color: transparent;
     color: rgb(11, 219, 4);
+    color: #ffffff;
     padding: 14px 36px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 2px solid rgb(9, 99, 6);
+    border: 2px solid #ffffff;
     letter-spacing: 0.5px;
 }
 
@@ -492,6 +534,7 @@ nav {
 
 .service-card {
     background-color: #e8f0eb;
+    height: 300px;
     padding: 40px;
     border-radius: 16px;
     text-align: center;
@@ -499,7 +542,6 @@ nav {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 1px solid rgba(45, 125, 58, 0.08);
     position: relative;
-    height: 300px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -818,11 +860,12 @@ nav {
 }
 
 .testimonial-card {
-    background-color: white;
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(12px);
     padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(26, 90, 42, 0.08);
-    border: 1px solid rgba(45, 125, 58, 0.08);
+    box-shadow: 0 8px 32px var(--glass-shadow);
+    border: 1px solid var(--glass-border);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
     flex-direction: column;
@@ -1471,60 +1514,67 @@ footer {
 /* Mobile & Small Screens (768px and below) */
 @media (max-width: 768px) {
     nav {
-        padding: 0.75rem 15px;
+        padding: 10px 20px;
+        width: 92%;
+        border-radius: 50px;
     }
 
-    /* Responsive logo sizing for mobile */
     .logo-icon {
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
     }
 
     #company-name {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         letter-spacing: 1.5px;
     }
 
     .nav-links {
         position: fixed;
-        left: -100%;
-        top: 70px;
+        right: 4%;
+        left: auto;
+        top: 85px;
+        display: flex;
         flex-direction: column;
-        background-color: rgba(212, 232, 217, 0.98);
+        background-color: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        width: 100%;
-        text-align: center;
-        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        padding: 2rem 0;
+        width: 200px;
+        text-align: right;
+        transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+        box-shadow: 0 15px 40px rgba(26, 90, 42, 0.15);
+        padding: 15px;
+        border-radius: 24px;
         z-index: 999;
-        max-height: 75vh;
-        overflow-y: auto;
+        opacity: 0;
+        transform: translateX(120%);
+        pointer-events: none;
+        border: 1px solid rgba(45, 125, 58, 0.1);
     }
 
     .nav-links.active {
-        left: 0;
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
     }
 
     .nav-links li {
-        margin: 0.8rem 0;
-        padding: 0 20px;
+        margin: 5px 0;
+        width: 100%;
     }
 
     .nav-links li a {
-        display: inline-block;
-        padding: 10px 16px;
-        border-radius: 8px;
-        background: rgba(45, 125, 58, 0.08);
-        transition: all 0.3s ease;
-        width: 100%;
-        font-size: 0.9rem;
+        display: block;
+        padding: 12px 20px;
+        background: transparent;
+        font-size: 1rem;
+        text-align: right;
     }
 
     .nav-links li a:hover {
-        background: rgba(45, 125, 58, 0.15);
-        transform: translateX(5px);
+        background: rgba(45, 125, 58, 0.05);
+        color: var(--secondary-color);
+        transform: none;
     }
 
     .hamburger {
