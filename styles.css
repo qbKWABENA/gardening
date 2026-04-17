@@ -24,6 +24,7 @@ body {
     color: #2c3e2f;
     background-color: #e9f5ed;
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* Prevents horizontal scroll during the menu bounce animation */
 }
 
 h1, h2, h3 {
@@ -34,8 +35,9 @@ h1, h2, h3 {
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 4.8rem;
     font-weight: 800;
+    line-height: 1.1;
     letter-spacing: -1px;
     letter-spacing: -0.5px;
 }
@@ -164,7 +166,8 @@ nav {
     letter-spacing: 0.5px;
     position: relative;
     display: inline-block;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);\
+    
 }
 
 .nav-links a::before,
@@ -175,7 +178,7 @@ nav {
     border: 1px solid transparent;
     width: 0;
     height: 0;
-    border-radius: 6px;
+    border-radius: 50px;
 }
 
 .nav-links a::before {
@@ -1633,7 +1636,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 3rem;
         margin-bottom: 1rem;
     }
 
@@ -1643,7 +1646,7 @@ footer {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
@@ -1847,8 +1850,8 @@ footer {
     }
 
     h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
+        font-size: 2.4rem;
+        line-height: 1.1;
     }
 
     h2 {
@@ -1882,7 +1885,7 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         margin-bottom: 0.8rem;
     }
 
