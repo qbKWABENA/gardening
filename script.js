@@ -63,50 +63,25 @@ document.querySelectorAll('.section').forEach(section => {
     observer.observe(section);
 });
 
-// Contact form validation
-const contactForm = document.getElementById('contactForm');
+// Form handling for Formspree
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Let Formspree handle the submission
+            // Just add basic validation if needed
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    let isValid = true;
-    let errorMessage = '';
-
-    if (name === '') {
-        isValid = false;
-        errorMessage += 'Name is required.\n';
-    }
-
-    if (email === '') {
-        isValid = false;
-        errorMessage += 'Email is required.\n';
-    } else if (!isValidEmail(email)) {
-        isValid = false;
-        errorMessage += 'Please enter a valid email address.\n';
-    }
-
-    if (message === '') {
-        isValid = false;
-        errorMessage += 'Message is required.\n';
-    }
-
-    if (isValid) {
-        // Here you would typically send the form data to a server
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
-    } else {
-        alert('Please correct the following errors:\n' + errorMessage);
+            if (name === '' || email === '' || message === '') {
+                e.preventDefault();
+                alert('Please fill in all fields.');
+            }
+        });
     }
 });
-
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
 
 // Auto-resize textarea based on content
 const messageInput = document.getElementById('message');
